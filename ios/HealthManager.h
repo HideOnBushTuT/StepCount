@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HealthManager : NSObject<RCTBridgeModule>
 
 @property (nonatomic, strong) HKHealthStore *healthStore;
-
+@property (nonatomic, assign) NSInteger times;
+@property (nonatomic, strong) NSMutableArray<NSNumber *> *stepsArr;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -33,13 +33,17 @@ export default class App extends Component<Props> {
   }
 
   componentDidMount() {
+    HealthManager.stepCountWithTimes(5)
+
     HealthManager.stepCountCallbackEvent((error, events) => {
       if (error) {
         console.log(error);
       } else {
         this.setState({ stepCount: events[0] });
+        console.log('events:', events)
       }
     });
+    
   }
 
   // function getStepCount() {
